@@ -4,9 +4,9 @@ import PostForm from "./components/PostForm";
 import Posts from "./components/Posts";
 
 const defaultPosts = [
-  { id: 0, name: "Post 1", info: "Info 1" },
-  { id: 1, name: "Post 2", info: "Info 2" },
-  { id: 2, name: "Post 3", info: "Info 3" },
+  { id: 0, title: "Post 1", text: "Info 1" },
+  { id: 1, title: "Post 2", text: "Info 2" },
+  { id: 2, title: "Post 3", text: "Info 3" },
 ];
 
 function App() {
