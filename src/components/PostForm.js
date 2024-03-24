@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Alert } from "./Alert";
+import { createPost } from "../redux/actions";
 
 class PostForm extends React.Component {
   constructor(props) {
@@ -17,7 +18,7 @@ class PostForm extends React.Component {
     const { title } = this.state;
 
     if (!title.trim()) {
-      return this.props.showAlert("Название поста не может быть пустым");
+      return; //this.props.showAlert("Название поста не может быть пустым");
     }
 
     const newPost = {
@@ -63,4 +64,8 @@ class PostForm extends React.Component {
   }
 }
 
-export default PostForm;
+const mapDispatchToProps = (dispatch) => ({
+  createPost: (post) => dispatch(createPost(post)),
+});
+
+export default connect(null, mapDispatchToProps)(PostForm);
