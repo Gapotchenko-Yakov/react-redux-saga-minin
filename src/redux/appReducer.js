@@ -7,9 +7,9 @@ const initialState = {
 export const appReducer = (state = initialState, action) => {
   switch (action.type) {
     case SHOW_LOADER:
-      return { loading: true };
+      return { ...state, loading: true };
     case HIDE_LOADER:
-      return { loading: false };
+      return { ...state, loading: false };
     default:
       return state;
   }
